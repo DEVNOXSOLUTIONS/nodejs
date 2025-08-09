@@ -5,7 +5,6 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
 
 // Allow any origin (works for file:// too)
 app.use(cors({ origin: '*' }));
@@ -25,4 +24,11 @@ app.get('/api/graduates/search', (req, res) => {
     });
 });
 
-app.listen(PORT, () => console.log(`Server running at https://nodejs-five-nu.vercel.app/:${PORT}`));
+// Export for Vercel
+module.exports = app;
+
+// Run locally if not in serverless
+if (require.main === module) {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+}
