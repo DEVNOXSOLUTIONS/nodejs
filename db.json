@@ -1,0 +1,12 @@
+{
+  "graduates": [
+    {
+      "Name": "Muhammad Hassan Bashir",
+      "percentage": "64%",
+      "awardTitle": "BS Biomedical Science",
+      "yearFrom": "2017",
+      "yearTo": "2020",
+      "degreeFile": "degree.png"
+    }
+  ]
+}
