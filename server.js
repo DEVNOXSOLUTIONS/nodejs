@@ -25,4 +25,4 @@ app.get('/api/graduates/search', (req, res) => {
     });
 });
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running at https://nodejs-five-nu.vercel.app/:${PORT}`));
